@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <form>
+      <input type="number" id = "fahrenheit" placeholder="Masukkan Suhu Fahrenheit">
+      <button type="button" onclick="tampilkansuhu()">Konversi</button>
+    </form>
+    <h3>celcius</h3>
+    <h3 id="suhu">0</h3>
+    <h3>C</h3>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+  <script>
+    function toCelcius(){
+  let fahrenheit = document.getElementById("fahrenheit").value;    
+  let konversi = (5/9)*(fahrenheit-32);
+  return konversi;
+}
+function tampilkanSuhu(){
+  document.getElementById("suhu").innerHtml=toCelcius().toFixed(2);
+}
+  </script>
+</html>
+
